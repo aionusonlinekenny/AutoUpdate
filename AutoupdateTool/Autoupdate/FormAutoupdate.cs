@@ -55,7 +55,7 @@ namespace Autoupdate
 
         private void ApplicationSetting()
         {
-            Settings.Default.CurrentDirectory = Environment.CurrentDirectory;
+            Settings.Default.CurrentDirectory = Application.StartupPath;
             // this.iniConfig = new IniConfig();
 
             /*this.iniAutoupdate = new IniAutoupdate();
