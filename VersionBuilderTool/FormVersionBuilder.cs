@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Autoupdate.Tools
 {
@@ -61,7 +58,12 @@ namespace Autoupdate.Tools
                 return;
             }
 
-            var files = Directory.GetFiles(sourceFolder, "*", SearchOption.AllDirectories);
+            // Lấy danh sách file, loại bỏ version.xml và version.xml.md5 nếu nằm trong thư mục nguồn
+            var files = Directory.GetFiles(sourceFolder, "*", SearchOption.AllDirectories)
+                .Where(f => !f.Equals(outputFile, StringComparison.OrdinalIgnoreCase)
+                         && !f.Equals(outputFile + ".md5", StringComparison.OrdinalIgnoreCase))
+                .ToArray();
+
             progressBar1.Value = 0;
             labelStatus.Text = "Bắt đầu tạo version.xml...";
 
@@ -72,18 +74,29 @@ namespace Autoupdate.Tools
             for (int i = 0; i < files.Length; i++)
             {
                 var filePath = files[i];
-                string relativePath = GetRelativePath(sourceFolder, filePath).Replace("\\", "/");
+                // GetRelativePath trả về forward slashes từ Uri
+                string relativeRaw = GetRelativePath(sourceFolder, filePath);
+
+                // <Path>: dùng backslash vì AutoUpdateTool dùng để ghép đường dẫn Windows
+                //   CurrentDirectory + "\" + Path  →  cần  "subfolder\file.exe"
+                string pathValue = relativeRaw.Replace("/", "\\");
+
+                // <Link>: dùng forward slash, KHÔNG có dấu "/" đầu
+                //   AutoUpdateTool ghép:  UpdateUrl + Link  (UpdateUrl đã kết thúc bằng "/")
+                //   → cần  "subfolder/file.exe"  để tránh double-slash trong URL
+                string linkValue = relativeRaw.Replace("\\", "/");
+
                 string md5 = CalculateMD5(filePath);
                 long size = new FileInfo(filePath).Length;
 
                 XmlElement item = xmlDoc.CreateElement("Item");
 
                 XmlElement pathNode = xmlDoc.CreateElement("Path");
-                pathNode.InnerText = relativePath;
+                pathNode.InnerText = pathValue;
                 item.AppendChild(pathNode);
 
                 XmlElement linkNode = xmlDoc.CreateElement("Link");
-                linkNode.InnerText = "/" + relativePath;
+                linkNode.InnerText = linkValue;
                 item.AppendChild(linkNode);
 
                 XmlElement md5Node = xmlDoc.CreateElement("MD5");
@@ -99,7 +112,7 @@ namespace Autoupdate.Tools
                 // Cập nhật tiến trình
                 int percent = (int)(((i + 1) * 100.0) / files.Length);
                 progressBar1.Value = percent;
-                labelStatus.Text = $"Đang xử lý: {relativePath} ({percent}%)";
+                labelStatus.Text = $"Đang xử lý: {pathValue} ({percent}%)";
                 Application.DoEvents();
             }
 
