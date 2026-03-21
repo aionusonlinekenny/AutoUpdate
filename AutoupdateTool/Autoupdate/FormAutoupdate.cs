@@ -86,7 +86,7 @@ namespace Autoupdate
             {
                 System.IO.File.Delete(bakFile);
             }
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; // Tls12
         }
 
 
