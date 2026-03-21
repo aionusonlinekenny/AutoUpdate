@@ -86,11 +86,7 @@ namespace Autoupdate
             {
                 System.IO.File.Delete(bakFile);
             }
-            ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, policy) =>
-            {
-                //do what you want
-                return true;
-            };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
 
