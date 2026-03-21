@@ -1,0 +1,25 @@
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Release\Autoupdate.exe.config
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Release\Autoupdate.exe
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Release\Autoupdate.pdb
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.csproj.ResolveComReference.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.FormAutoupdate.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.FormConfig.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.Properties.Resources.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.csproj.GenerateResource.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.csproj.CoreCompileInputs.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.exe
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Release\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Release\Autoupdate.exe.config
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Release\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Release\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.csproj.AssemblyReference.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.csproj.ResolveComReference.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.FormAutoupdate.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.FormConfig.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.Properties.Resources.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.csproj.GenerateResource.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.csproj.CoreCompileInputs.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Release\Autoupdate.pdb

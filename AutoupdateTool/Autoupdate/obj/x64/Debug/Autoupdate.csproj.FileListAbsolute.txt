@@ -1,0 +1,13 @@
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\x64\Debug\Autoupdate.exe.config
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\x64\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\x64\Debug\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.csproj.AssemblyReference.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.csproj.ResolveComReference.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.FormAutoupdate.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.FormConfig.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.Properties.Resources.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.csproj.GenerateResource.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.csproj.CoreCompileInputs.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\x64\Debug\Autoupdate.pdb

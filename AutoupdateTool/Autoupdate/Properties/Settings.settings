@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Autoupdate.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CurrentDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LauncherUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://173.17.151.87/launcher/index.html</Value>
+    </Setting>
+    <Setting Name="UpdateUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://173.17.151.87/hostfiles2/autoupdate/</Value>
+    </Setting>
+    <Setting Name="VersionFileUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://173.17.151.87/hostfiles2/autoupdate/version.xml</Value>
+    </Setting>
+    <Setting Name="VersionFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">version.xml</Value>
+    </Setting>
+    <Setting Name="TmpFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tmp</Value>
+    </Setting>
+    <Setting Name="ConfigFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">config.ini</Value>
+    </Setting>
+    <Setting Name="GameServPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5622</Value>
+    </Setting>
+    <Setting Name="DenialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5623</Value>
+    </Setting>
+    <Setting Name="AutoupdateFileUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://173.17.151.87/hostfiles2/autoupdate/Autoupdate.exe</Value>
+    </Setting>
+    <Setting Name="AutoupdateFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Autoupdate.exe</Value>
+    </Setting>
+    <Setting Name="AutoupdateINI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Autoupdate.ini</Value>
+    </Setting>
+    <Setting Name="GameFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">game.exe</Value>
+    </Setting>
+    <Setting Name="Suafont" Type="System.String" Scope="User">
+      <Value Profile="(Default)">vn.fon</Value>
+    </Setting>
+    <Setting Name="AutoKyKx" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KYKeoxe\KYKeoxe.exe</Value>
+    </Setting>
+    <Setting Name="AutoTrainFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Auto\AutoVLBS19_Free\AutoVLBSFree.exe</Value>
+    </Setting>
+    <Setting Name="AutoPKFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VLBS_PK_12\VLBS_PK.exe</Value>
+    </Setting>
+    <Setting Name="WebHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.vldoxanh.com</Value>
+    </Setting>
+    <Setting Name="WebRegister" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.vldoxanh.com/register/register.html</Value>
+    </Setting>
+    <Setting Name="WebFanPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://fb.com</Value>
+    </Setting>
+    <Setting Name="hwidUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://173.17.151.87//hostfiles2/api/hwid</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

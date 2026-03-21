@@ -1,0 +1,39 @@
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Debug\Autoupdate.exe.config
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Debug\Autoupdate.exe
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\bin\Debug\Autoupdate.pdb
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.csproj.AssemblyReference.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.csproj.ResolveComReference.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.FormAutoupdate.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.FormConfig.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.Properties.Resources.resources
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.csproj.GenerateResource.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.csproj.CoreCompileInputs.cache
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.exe
+D:\autoupdate pro\ttt\Autoupdate\Autoupdate\obj\Debug\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.exe.config
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.AssemblyReference.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.ResolveComReference.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.FormAutoupdate.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.FormConfig.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.Properties.Resources.resources
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.GenerateResource.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.CoreCompileInputs.cache
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\auto uptate bull\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.exe.config
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\bin\Debug\Autoupdate.pdb
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.AssemblyReference.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.ResolveComReference.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.FormAutoupdate.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.FormConfig.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.Properties.Resources.resources
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.GenerateResource.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.csproj.CoreCompileInputs.cache
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.exe
+C:\Users\KennyLucia-PC\Desktop\Autoupdate + active tai khoan\Autoupdate\obj\Debug\Autoupdate.pdb

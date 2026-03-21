@@ -1,0 +1,10 @@
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\bin\Debug\VersionBuilderTool.exe.config
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\bin\Debug\VersionBuilderTool.exe
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\bin\Debug\VersionBuilderTool.pdb
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.csproj.AssemblyReference.cache
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\Autoupdate.Tools.FormVersionBuilder.resources
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.Properties.Resources.resources
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.csproj.GenerateResource.cache
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.csproj.CoreCompileInputs.cache
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.exe
+C:\Users\KennyLucia-PC\source\repos\VersionBuilderTool\obj\Debug\VersionBuilderTool.pdb

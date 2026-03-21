@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FB03CB0-F117-4424-ACE2-5B59C734C56D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Autoupdate</RootNamespace>
+    <AssemblyName>Autoupdate</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>vltk.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAutoupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoupdate.Designer.cs">
+      <DependentUpon>FormAutoupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\DeviceInfoHelper.cs" />
+    <Compile Include="Lib\IniAutoupdate.cs" />
+    <Compile Include="Lib\IniConfig.cs" />
+    <Compile Include="Lib\INIFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAutoupdate.resx">
+      <DependentUpon>FormAutoupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batdau32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cauhinh24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cauhinh33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-hover.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangky12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangky2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fanpage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fbgroup12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fbgroup2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jx-config-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kykx2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kykx3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pk122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pk123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thulai13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thulai2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thulai3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangchu13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangchu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Interop.IWshRuntimeLibrary.dll" />
+    <None Include="Resources\KimYen1.png" />
+    <None Include="Resources\KimYen2.png" />
+    <None Include="Resources\tat1.png" />
+    <None Include="Resources\tat2.png" />
+    <None Include="Resources\vaogame1.png" />
+    <None Include="Resources\vaogame3.png" />
+    <None Include="Resources\vaogame.png" />
+    <None Include="Resources\vaogame2.png" />
+    <None Include="Resources\cauhinh1.png" />
+    <None Include="Resources\cauhinh2.png" />
+    <None Include="Resources\dangnhap1.png" />
+    <None Include="Resources\dangnhap2.png" />
+    <None Include="Resources\dangnhap3.png" />
+    <None Include="Resources\thulai1.png" />
+    <None Include="Resources\thulai21.png" />
+    <None Include="Resources\thulai31.png" />
+    <None Include="Resources\cauhinh11.png" />
+    <None Include="Resources\cauhinh21.png" />
+    <None Include="Resources\autopk1.png" />
+    <None Include="Resources\autopk2.png" />
+    <None Include="Resources\autovlbs3.png" />
+    <None Include="Resources\autovlbs2.png" />
+    <None Include="Resources\autokimyen1.png" />
+    <None Include="Resources\autokimyen2.png" />
+    <None Include="Resources\suafontauto1.png" />
+    <None Include="Resources\suafontauto2.png" />
+    <None Include="Resources\thulai11.png" />
+    <None Include="Resources\thulai22.png" />
+    <None Include="Resources\thulai32.png" />
+    <None Include="Resources\cauhinh12.png" />
+    <None Include="Resources\cauhinh22.png" />
+    <None Include="Resources\autotrain1.png" />
+    <None Include="Resources\autotrain2.png" />
+    <None Include="Resources\autopk11.png" />
+    <None Include="Resources\autopk21.png" />
+    <None Include="Resources\fontauto1.png" />
+    <None Include="Resources\fontauto2.png" />
+    <None Include="Resources\autokimyen21.png" />
+    <None Include="Resources\autokimyen11.png" />
+    <None Include="Resources\thulai12.png" />
+    <None Include="Resources\login1.png" />
+    <None Include="Resources\login2.png" />
+    <None Include="Resources\login3.png" />
+    <None Include="Resources\cauhinh13.png" />
+    <None Include="Resources\cauhinh23.png" />
+    <None Include="Resources\thulai14.png" />
+    <None Include="Resources\thulai23.png" />
+    <None Include="Resources\thulai33.png" />
+    <None Include="Resources\autotrain11.png" />
+    <None Include="Resources\autotrain21.png" />
+    <None Include="Resources\autopk12.png" />
+    <None Include="Resources\autopk22.png" />
+    <None Include="Resources\trangchu1.png" />
+    <None Include="Resources\trangchu21.png" />
+    <None Include="Resources\dangky1.png" />
+    <None Include="Resources\dangky21.png" />
+    <None Include="Resources\fontauto11.png" />
+    <None Include="Resources\fontauto21.png" />
+    <None Include="Resources\fanpage1.png" />
+    <None Include="Resources\bg1.png" />
+    <Content Include="Resources\logovltk.png" />
+    <Content Include="vltk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
