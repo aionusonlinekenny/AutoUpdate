@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
+using Microsoft.Win32;
 
 namespace Autoupdate
 {
@@ -541,10 +542,33 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
 
         private void btnPlayGame_Click(object sender, EventArgs e)
         {
-            //this.runExternalApp("config.exe");
             btnPlayGame.BackColor = Color.Transparent;
             btnPlayGame.BackgroundImage = Resources.login3;
+            string gameFullPath = Path.Combine(Settings.Default.CurrentDirectory, Settings.Default.GameFile);
+            this.EnsureGame16BitColor(gameFullPath);
             this.runExternalApp(Settings.Default.GameFile);
+        }
+
+        private void EnsureGame16BitColor(string gameFullPath)
+        {
+            const string layersKey = @"Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers";
+            const string colorFlag = "16BITCOLOR";
+            try
+            {
+                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(layersKey, writable: true)
+                                      ?? Registry.CurrentUser.CreateSubKey(layersKey))
+                {
+                    string current = key.GetValue(gameFullPath) as string ?? "";
+                    if (current.IndexOf(colorFlag, StringComparison.OrdinalIgnoreCase) < 0)
+                    {
+                        string newValue = string.IsNullOrWhiteSpace(current)
+                            ? "~ " + colorFlag
+                            : current + " " + colorFlag;
+                        key.SetValue(gameFullPath, newValue);
+                    }
+                }
+            }
+            catch { }
         }
 
         private void btnPlayGame_MouseHover(object sender, EventArgs e)
