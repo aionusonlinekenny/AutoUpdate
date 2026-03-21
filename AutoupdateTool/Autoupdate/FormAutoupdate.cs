@@ -561,7 +561,7 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
                     string current = key.GetValue(gameFullPath) as string ?? "";
                     if (current.IndexOf(colorFlag, StringComparison.OrdinalIgnoreCase) < 0)
                     {
-                        string newValue = string.IsNullOrWhiteSpace(current)
+                        string newValue = string.IsNullOrEmpty(current.Trim())
                             ? "~ " + colorFlag
                             : current + " " + colorFlag;
                         key.SetValue(gameFullPath, newValue);
