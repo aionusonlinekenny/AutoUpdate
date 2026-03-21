@@ -544,7 +544,7 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
         {
             btnPlayGame.BackColor = Color.Transparent;
             btnPlayGame.BackgroundImage = Resources.login3;
-            string gameFullPath = Path.Combine(Settings.Default.CurrentDirectory, Settings.Default.GameFile);
+            string gameFullPath = Path.GetFullPath(Settings.Default.GameFile);
             this.EnsureGame16BitColor(gameFullPath);
             this.runExternalApp(Settings.Default.GameFile);
         }
