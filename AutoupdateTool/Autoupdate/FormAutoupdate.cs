@@ -79,12 +79,22 @@ namespace Autoupdate
             backgroundWorker1.WorkerReportsProgress = true;
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
-            this.TransparencyKey = Color.Empty;   // xóa DarkGray key từ designer (tránh xung đột với Region)
+            this.TransparencyKey = Color.Empty;
             this.BackColor = Color.Black;
             this.mainPanel.BackColor = Color.Transparent;
-            Bitmap bgBitmap = (Bitmap)Resources.bg1;
-            this.mainPanel.BackgroundImage = bgBitmap;
-            this.ApplyRegionFromPng(bgBitmap);
+            // mainPanel.BackgroundImage đã được set bởi designer - KHÔNG override
+            // Dùng image của designer để build Region (đảm bảo đúng alpha)
+            if (this.mainPanel.BackgroundImage != null)
+            {
+                Image src = this.mainPanel.BackgroundImage;
+                Bitmap argbBmp = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                using (Graphics g = Graphics.FromImage(argbBmp))
+                {
+                    g.Clear(Color.Transparent);
+                    g.DrawImage(src, 0, 0);
+                }
+                this.ApplyRegionFromPng(argbBmp);
+            }
             string bakFile = Path.Combine(Settings.Default.CurrentDirectory, "Autoupdate_bak.exe");
 
             if (System.IO.File.Exists(bakFile))
