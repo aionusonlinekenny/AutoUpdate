@@ -79,6 +79,8 @@ namespace Autoupdate
             backgroundWorker1.WorkerReportsProgress = true;
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
+            this.TransparencyKey = Color.Empty;   // xóa DarkGray key từ designer (tránh xung đột với Region)
+            this.BackColor = Color.Black;
             this.mainPanel.BackColor = Color.Transparent;
             Bitmap bgBitmap = (Bitmap)Resources.bg1;
             this.mainPanel.BackgroundImage = bgBitmap;
