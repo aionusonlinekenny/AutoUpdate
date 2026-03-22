@@ -80,8 +80,9 @@ namespace Autoupdate
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
             this.mainPanel.BackColor = Color.Transparent;
-            this.mainPanel.BackgroundImage = Resources.bg1;
-            this.ApplyRegionFromPng(new Bitmap(Resources.bg1));
+            Bitmap bgBitmap = (Bitmap)Resources.bg1;
+            this.mainPanel.BackgroundImage = bgBitmap;
+            this.ApplyRegionFromPng(bgBitmap);
             string bakFile = Path.Combine(Settings.Default.CurrentDirectory, "Autoupdate_bak.exe");
 
             if (System.IO.File.Exists(bakFile))
