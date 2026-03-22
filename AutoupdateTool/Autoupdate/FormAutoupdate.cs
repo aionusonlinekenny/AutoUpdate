@@ -79,26 +79,7 @@ namespace Autoupdate
             backgroundWorker1.WorkerReportsProgress = true;
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
-            this.TransparencyKey = Color.Empty;
-            this.BackColor = Color.Black;
-            this.mainPanel.BackColor = Color.Transparent;
-            // mainPanel.BackgroundImage đã được set bởi designer - KHÔNG override
-            // Build Region từ background image, tính offset do ImageLayout.Center
-            if (this.mainPanel.BackgroundImage != null)
-            {
-                Image src = this.mainPanel.BackgroundImage;
-                Bitmap argbBmp = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-                using (Graphics g = Graphics.FromImage(argbBmp))
-                {
-                    g.Clear(Color.Transparent);
-                    g.DrawImage(src, 0, 0);
-                }
-                // ImageLayout.Center: image được căn giữa trên panel
-                int xOff = (this.mainPanel.Width - argbBmp.Width) / 2;
-                int yOff = (this.mainPanel.Height - argbBmp.Height) / 2;
-                this.ApplyRegionFromPng(argbBmp, xOff, yOff, this.mainPanel.Width, this.mainPanel.Height);
-                argbBmp.Dispose();
-            }
+            this.mainPanel.BackgroundImage = Resources.bg1;
             string bakFile = Path.Combine(Settings.Default.CurrentDirectory, "Autoupdate_bak.exe");
 
             if (System.IO.File.Exists(bakFile))
@@ -845,43 +826,6 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
         //    btnMinimize.BackgroundImage = Properties.Resources.thu2;
         //    //btnMinimize.BackgroundImage = Properties.Resources.close2;
         //}
-
-        private void ApplyRegionFromPng(Bitmap bmp, int xOff, int yOff, int formW, int formH)
-        {
-            var bmpData = bmp.LockBits(
-                new Rectangle(0, 0, bmp.Width, bmp.Height),
-                System.Drawing.Imaging.ImageLockMode.ReadOnly,
-                System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-
-            int stride = bmpData.Stride;   // đọc TRƯỚC khi UnlockBits
-            int bytes = Math.Abs(stride) * bmp.Height;
-            byte[] pixels = new byte[bytes];
-            System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, pixels, 0, bytes);
-            bmp.UnlockBits(bmpData);
-
-            // Bắt đầu bằng Region rỗng, rồi thêm từng đoạn opaque (có offset căn giữa)
-            var path = new System.Drawing.Drawing2D.GraphicsPath();
-
-            for (int y = 0; y < bmp.Height; y++)
-            {
-                int xStart = -1;
-                for (int x = 0; x < bmp.Width; x++)
-                {
-                    bool opaque = pixels[y * stride + x * 4 + 3] > 10;
-                    if (opaque && xStart < 0)
-                        xStart = x;
-                    else if (!opaque && xStart >= 0)
-                    {
-                        path.AddRectangle(new Rectangle(xOff + xStart, yOff + y, x - xStart, 1));
-                        xStart = -1;
-                    }
-                }
-                if (xStart >= 0)
-                    path.AddRectangle(new Rectangle(xOff + xStart, yOff + y, bmp.Width - xStart, 1));
-            }
-
-            this.Region = new Region(path);
-        }
 
         private string getTmpDirectory()
         {
