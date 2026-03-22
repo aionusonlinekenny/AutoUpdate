@@ -849,13 +849,13 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
                 System.Drawing.Imaging.ImageLockMode.ReadOnly,
                 System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 
-            int bytes = Math.Abs(bmpData.Stride) * bmp.Height;
+            int stride = bmpData.Stride;   // phải đọc TRƯỚC khi UnlockBits
+            int bytes = Math.Abs(stride) * bmp.Height;
             byte[] pixels = new byte[bytes];
             System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, pixels, 0, bytes);
             bmp.UnlockBits(bmpData);
 
             var path = new System.Drawing.Drawing2D.GraphicsPath();
-            int stride = bmpData.Stride;
 
             for (int y = 0; y < bmp.Height; y++)
             {
