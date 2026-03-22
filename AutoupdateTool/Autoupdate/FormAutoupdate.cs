@@ -79,10 +79,9 @@ namespace Autoupdate
             backgroundWorker1.WorkerReportsProgress = true;
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
-            this.BackColor = Color.Magenta;
-            this.TransparencyKey = Color.Magenta;
             this.mainPanel.BackColor = Color.Transparent;
             this.mainPanel.BackgroundImage = Resources.bg1;
+            this.ApplyRegionFromPng(new Bitmap(Resources.bg1));
             string bakFile = Path.Combine(Settings.Default.CurrentDirectory, "Autoupdate_bak.exe");
 
             if (System.IO.File.Exists(bakFile))
@@ -829,6 +828,42 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
         //    btnMinimize.BackgroundImage = Properties.Resources.thu2;
         //    //btnMinimize.BackgroundImage = Properties.Resources.close2;
         //}
+
+        private void ApplyRegionFromPng(Bitmap bmp)
+        {
+            var bmpData = bmp.LockBits(
+                new Rectangle(0, 0, bmp.Width, bmp.Height),
+                System.Drawing.Imaging.ImageLockMode.ReadOnly,
+                System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+
+            int bytes = Math.Abs(bmpData.Stride) * bmp.Height;
+            byte[] pixels = new byte[bytes];
+            System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, pixels, 0, bytes);
+            bmp.UnlockBits(bmpData);
+
+            var path = new System.Drawing.Drawing2D.GraphicsPath();
+            int stride = bmpData.Stride;
+
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                int xStart = -1;
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    bool opaque = pixels[y * stride + x * 4 + 3] > 10;
+                    if (opaque && xStart < 0)
+                        xStart = x;
+                    else if (!opaque && xStart >= 0)
+                    {
+                        path.AddRectangle(new Rectangle(xStart, y, x - xStart, 1));
+                        xStart = -1;
+                    }
+                }
+                if (xStart >= 0)
+                    path.AddRectangle(new Rectangle(xStart, y, bmp.Width - xStart, 1));
+            }
+
+            this.Region = new Region(path);
+        }
 
         private string getTmpDirectory()
         {
