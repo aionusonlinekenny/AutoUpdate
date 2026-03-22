@@ -37,7 +37,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://173.17.151.87/launcher/index.html")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/launcher1/index.html")]
         public string LauncherUrl {
             get {
                 return ((string)(this["LauncherUrl"]));
@@ -49,7 +49,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://173.17.151.87/hostfiles2/autoupdate/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/hostfiles2/autoupdate/")]
         public string UpdateUrl {
             get {
                 return ((string)(this["UpdateUrl"]));
@@ -61,7 +61,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://173.17.151.87/hostfiles2/autoupdate/version.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/hostfiles2/autoupdate/version.xml")]
         public string VersionFileUrl {
             get {
                 return ((string)(this["VersionFileUrl"]));
@@ -133,7 +133,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://173.17.151.87/hostfiles2/autoupdate/Autoupdate.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/hostfiles2/autoupdate/Autoupdate.exe")]
         public string AutoupdateFileUrl {
             get {
                 return ((string)(this["AutoupdateFileUrl"]));
@@ -193,7 +193,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("KYKeoxe\\KYKeoxe.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("AutoFree\\AutoFree.exe")]
         public string AutoKyKx {
             get {
                 return ((string)(this["AutoKyKx"]));
@@ -205,7 +205,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Auto\\AutoVLBS19_Free\\AutoVLBSFree.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("AutoFree\\AutoFree.exe")]
         public string AutoTrainFile {
             get {
                 return ((string)(this["AutoTrainFile"]));
@@ -217,7 +217,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("VLBS_PK_12\\VLBS_PK.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("AutoFree\\AutoFree.exe")]
         public string AutoPKFile {
             get {
                 return ((string)(this["AutoPKFile"]));
@@ -229,7 +229,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.vldoxanh.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251")]
         public string WebHome {
             get {
                 return ((string)(this["WebHome"]));
@@ -241,7 +241,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.vldoxanh.com/register/register.html")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/index.php?act=register")]
         public string WebRegister {
             get {
                 return ((string)(this["WebRegister"]));
@@ -253,7 +253,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://fb.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://fb.com")]
         public string WebFanPage {
             get {
                 return ((string)(this["WebFanPage"]));
@@ -265,7 +265,7 @@ namespace Autoupdate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://173.17.151.87//hostfiles2/api/hwid")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://160.191.244.251/hostfiles2/api/hwid")]
         public string hwidUrl {
             get {
                 return ((string)(this["hwidUrl"]));
