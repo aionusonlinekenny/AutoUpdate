@@ -79,6 +79,9 @@ namespace Autoupdate
             backgroundWorker1.WorkerReportsProgress = true;
             this.CreateShortcut(this.shortcutName, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Assembly.GetExecutingAssembly().Location);
             this.FormBorderStyle = FormBorderStyle.None;
+            this.BackColor = Color.Magenta;
+            this.TransparencyKey = Color.Magenta;
+            this.mainPanel.BackColor = Color.Transparent;
             this.mainPanel.BackgroundImage = Resources.bg1;
             string bakFile = Path.Combine(Settings.Default.CurrentDirectory, "Autoupdate_bak.exe");
 
