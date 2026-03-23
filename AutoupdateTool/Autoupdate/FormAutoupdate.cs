@@ -542,7 +542,47 @@ webBrowser_launcher.Url = new Uri(noCacheUrl);
             btnPlayGame.BackgroundImage = Resources.login3;
             string gameFullPath = Path.GetFullPath(Settings.Default.GameFile);
             this.EnsureGame16BitColor(gameFullPath);
+            this.EnsureGameDEP(gameFullPath);
             this.runExternalApp(Settings.Default.GameFile);
+        }
+
+        private void EnsureGameDEP(string gameFullPath)
+        {
+            try
+            {
+                using (var fs = new System.IO.FileStream(gameFullPath, System.IO.FileMode.Open, System.IO.FileAccess.ReadWrite, System.IO.FileShare.None))
+                {
+                    // Đọc offset PE header từ DOS header offset 0x3C
+                    fs.Seek(0x3C, System.IO.SeekOrigin.Begin);
+                    byte[] buf4 = new byte[4];
+                    fs.Read(buf4, 0, 4);
+                    long peOffset = BitConverter.ToInt32(buf4, 0);
+
+                    // Kiểm tra chữ ký PE "PE\0\0"
+                    fs.Seek(peOffset, System.IO.SeekOrigin.Begin);
+                    byte[] sig = new byte[4];
+                    fs.Read(sig, 0, 4);
+                    if (sig[0] != 'P' || sig[1] != 'E' || sig[2] != 0 || sig[3] != 0)
+                        return;
+
+                    // DllCharacteristics nằm ở optional header offset 70
+                    // Optional header bắt đầu tại peOffset + 24 (4-byte sig + 20-byte COFF header)
+                    long dllCharPos = peOffset + 24 + 70;
+                    fs.Seek(dllCharPos, System.IO.SeekOrigin.Begin);
+                    byte[] buf2 = new byte[2];
+                    fs.Read(buf2, 0, 2);
+                    ushort dllChars = BitConverter.ToUInt16(buf2, 0);
+
+                    const ushort NX_COMPAT = 0x0100; // IMAGE_DLLCHARACTERISTICS_NX_COMPAT
+                    if ((dllChars & NX_COMPAT) == 0)
+                    {
+                        dllChars |= NX_COMPAT;
+                        fs.Seek(dllCharPos, System.IO.SeekOrigin.Begin);
+                        fs.Write(BitConverter.GetBytes(dllChars), 0, 2);
+                    }
+                }
+            }
+            catch { }
         }
 
         private void EnsureGame16BitColor(string gameFullPath)
